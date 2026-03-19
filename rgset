@@ -1,6 +1,6 @@
 set{
   var{
-    name=test,
+    name=interview-task,
     source=main.cpp,
     bit=64,
     flags = "-g -std=c++23"
