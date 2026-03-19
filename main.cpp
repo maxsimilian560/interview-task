@@ -3,6 +3,9 @@
 #include <vector>
 #include <cstring>
 #include <bit>
+#ifdef _WIN32
+#include <windows.h>
+#endif
 struct ListNode { // ListNode модифицировать нельзя
   ListNode* prev = nullptr; // указатель на предыдущий элемент или nullptr
   ListNode* next = nullptr;
@@ -168,6 +171,9 @@ public:
   }
 };
 int main(int argc, char* argv[]) {
+  #ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+  #endif
   std::string infile = "inlet.in";
   if (argc > 1) {
     if (std::string(argv[1]) == "-h" || std::string(argv[1]) == "--help") {
