@@ -1,0 +1,8 @@
+set{
+  var{
+    name=test,
+    source=main.cpp,
+    bit=64,
+    flags = "-g -std=c++23"
+  }
+}
